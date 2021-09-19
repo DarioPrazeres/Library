@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  class="text-center bg-dark">
+    <header class="mb-3">
+        <h1>Your Library</h1>
+        <button type="button" class="btn btn-primary" id="addBook">Add Book</button>
+        
+    </header>
+    
+    <section class="container bg-light rounded pb-2 mb-3" id="form"> 
+        <form action="">
+            <h1>Add New Book</h1>
+            <div class="form-group mb-3">
+                <input type="text" class="form-control" id="formTitle"placeholder="Title">
+            </div>
+             <div class="form-group mb-3">
+                 <input type="text" class="form-control" id="formName" placeholder="Author">
+            </div>
+            <div class="form-group mb-3">
+                <input type="number" name="" class="form-control" id="formPa" placeholder="Pages">
+            </div> 
+            <div class="form-group mb-2">
+                <label for="color">Wrapper Color</label>
+                <input type="color"value="#ffff" name="" id="colorWrapper">
+            </div>
+            <div class="form-group mb-2">
+                <label for="color">Wrapper Color Text</label>
+                <input type="color"name="" id="colorText">
+            </div>
+            <div class="form-group form-check-label mb-2">
+                <label for="" class="form-check-label">
+                    <input type="checkbox" value="true" name=""  checked id="readOrNot">Have you read it?
+                </label>
+            </div>            
+            <button type="button" class="btn btn-dark" id="addictionBook">Submit</button>  
+            <button type="button" class="btn ml-3" id="cancel">Cancel</button>         
+        </form>
+    </section>
+                
+    <section class="container" id="locker">
+    </section>
+    <footer class="fixed-bottom">
+        &copy;DPproject
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

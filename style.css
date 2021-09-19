@@ -1,0 +1,25 @@
+body{
+    color: #ffff;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.bg-light{
+    color: black;
+} 
+#form{
+    display: none;
+    
+}
+#locker{
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 5px;
+   
+}
+
+
