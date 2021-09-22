@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Function</title>
+</head>
+<body>
+    Do not worry!
+    <p>my function are used in prompt!</p>
+    <p>Open the prompt and enjoy yoyr day!!</p>
+
+    <script>
+        const FactoryFunction=string=>{
+            const capitalize=()=>string.toUpperCase(); 
+            const printString=()=>console.log(`${capitalize()}`);
+            return{printString,capitalize};
+
+        }
+        const personFactory = (name, age) => {
+            const sayHello = () => console.log('hello!');
+            const info=()=>console.log(`Eu sou o ${name} tenho ${age}`);
+            return { info, sayHello };
+        };
+
+        const Player = (name, level) => {
+            let health = level * 2;
+            const getLevel = () => level;
+            const getName  = () => name;
+            const die = () => {
+            // uh oh
+        };
+        const damage = x => {
+            health -= x;
+            if (health <= 0) {
+            die();
+            }
+        };
+        const attack = enemy => {
+            if (level < enemy.getLevel()) {
+                damage(1);
+                console.log(`${enemy.getName()} has damaged ${name}`);
+            }
+            if (level >= enemy.getLevel()) {
+                enemy.damage(1);
+                console.log(`${name} has damaged ${enemy.getName()}`);
+            }
+        };
+        return {attack, damage, getLevel, getName}
+    };
+    </script>
+</body>
+</html>

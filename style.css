@@ -10,16 +10,31 @@ header{
 .bg-light{
     color: black;
 } 
+.outForm{
+    position: relative;
+    background-color: black;
+}
 #form{
     display: none;
+    width: 90%;
+
+    position: absolute;
+    right: 10px;
     
 }
+
 #locker{
-    color: black;
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    gap: 5px;
-   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+    
+}
+@media only screen and (min-width: 768px){
+    #form{
+        width: 500px;
+    }
+  
 }
 
 

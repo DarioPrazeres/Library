@@ -49,22 +49,34 @@ function ad(){
     const author = document.createElement('h3');
     const nPa = document.createElement('h6');
     const rem = document.createElement('div');
-    const lendo = document.createElement('h5');
+    const lendo = document.createElement('button');
+    //const read = document.createElement('button');
 
     rem.addEventListener('click', ()=>{
         meuBook.style.display= "none";
     });
     
+    lendo.addEventListener('click', ()=>{
+        if(lendo.innerHTML=='Not reading'){
+            lendo.innerHTML=`Reading`;
+        }else{
+            lendo.innerHTML=`Not reading`;
+        }
+    })
     //estilo Para cada livro
     meuBook.setAttribute('style', 'border-radius: 11px;');
     meuBook.style.backgroundColor = colorWrapperBook.value;
     meuBook.style.color = colorTextWrapper.value;
     meuBook.style.height ="250px";
+    meuBook.style.width= "200px";
+    meuBook.style.margin="5px";
+    titulo.setAttribute('style','font-size:30px');
 
     //estilo do remover
     rem.setAttribute('style','border: none; background-image: url(./icon/ic_cancel_white_24dp.png);  width: 30px;   height: 30px; background-size: cover;    background-repeat: no-repeat; background-color: black; opacity:0.5; border-radius:50%');
 
-    insideBook.setAttribute('style', 'height:200px; display:flex; justify-content: center; align-items: center;flex-wrap: wrap;');
+    insideBook.setAttribute('style', 'height:auto;  justify-content: center; align-items: center;flex-wrap: wrap;');
+    lendo.setAttribute('style','border: none; width:150px;text-size:18px; border-radius:5px; height:30px; margin-top:10px; margin-bottom:2px' );
    
     //adicionar os livros no Armario
     meuBook.appendChild(rem);
@@ -73,14 +85,16 @@ function ad(){
     insideBook.appendChild(author);
     insideBook.appendChild(lendo);
     insideBook.appendChild(nPa);
+    //insideBook.appendChild(read);
     
     
     locker.appendChild(meuBook);
 
     titulo.innerHTML = `${library[cont].title} <br>`;
     author.innerHTML = `By: ${library[cont].name} <br>`;
-    nPa.innerHTML = `${library[cont].pa} Pages`;
-    lendo.innerHTML = `${library[cont].read()}`; 
+    lendo.innerHTML = `${library[cont].read()} <br>`;
+    nPa.innerHTML = `${library[cont].pa} Pages <br>`;
+     
    
     
     
@@ -98,10 +112,10 @@ function Book(name, title, pa,position){
         return `Nome do livro: ${name} \nTitulo do livro: ${title} \nN. De Pagina: ${pa}`;
     }
     this.read=function(){
-        if(readNot.value=="true"){
-            return `reading`;
+        if(readNot.checked){
+            return `Reading`;
         }else{
-            return `Not reading`;
+            return `Not Reading`;
         }
     }
 
