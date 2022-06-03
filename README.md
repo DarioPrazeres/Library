@@ -1,13 +1,11 @@
 # Library
-This project is a front-end of library control with JS. You can see your live action here:
-https://darioprazeres.github.io/Library/
 
 <!-- Please update value in the {}  -->
 
 <h1 align="center">Library</h1>
 
 
-<img src='https://img.shields.io/github/issues/DarioPrazeres/Restaurant'> <img src='https://img.shields.io/github/forks/DarioPrazeres/Restaurant'> <img src='https://img.shields.io/github/stars/DarioPrazeres/Restaurant'> <img src='https://img.shields.io/github/license/DarioPrazeres/Restaurant'> <img src='https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FDarioPrazeres%2FRestaurant'>
+<img src='https://img.shields.io/github/issues/DarioPrazeres/Library'> <img src='https://img.shields.io/github/forks/DarioPrazeres/Library'> <img src='https://img.shields.io/github/stars/DarioPrazeres/Library'> <img src='https://img.shields.io/github/license/DarioPrazeres/Library'>
 
 <div align="center">
    Solution for a challenge from  <a href="theodinproject.com" target="_blank">The Odin Project</a>.
@@ -43,7 +41,7 @@ https://darioprazeres.github.io/Library/
 
 ## Overview
 
-<p>The Library allow to create books with title, author and color of Book. It is a exercise to develop my skill in DOM.</p>
+<p>The Library allow to create books with title, author and color of Book. It is a exercise to develop my skill in DOM. It dos not storage the data</p>
 
 
 ### Built With
